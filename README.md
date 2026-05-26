@@ -765,3 +765,54 @@ If you find yourself opening more than three PRs against this repo, ping me and 
 ---
 
 **Built by [@hmzainjamil](https://github.com/hmzainjamil). MIT-licensed. PRs welcome. Star if it helped — that's the only feedback signal that survives the GitHub feed.**
+
+
+---
+
+## 🧠 Mental models
+
+Three mental models that make this repo click:
+
+### Model 1 — The pipeline
+
+Treat `fact-check-skill` as a pipeline: input enters, runs through declared stages, emits an output. No surprise side-channels. If you can't draw it on a napkin, the design is wrong.
+
+### Model 2 — The contract
+
+Every manifest is a contract between the user and the runtime. The contract says: *given this trigger, expect this behavior*. Breaking the contract requires a major version bump. Period.
+
+### Model 3 — The ledger
+
+State lives in an append-only ledger. The ledger is the truth. The UI, the logs, the dashboards — all are just projections of the ledger. To debug, you read the ledger backwards.
+
+
+---
+
+## 🪙 Token economy
+
+Concrete token-budget tactics this repo encodes:
+
+- **Decompose first.** A 50-step task split into 10 sub-agents is cheaper than one 50-step Claude call.
+- **Cache aggressively.** Same upstream input → same upstream output → cached locally.
+- **Synthesize once.** Tier-0 models gather; one paid call synthesizes. Never the reverse.
+- **Trim transcripts.** Drop turns that don't survive a relevance filter before re-prompting.
+- **Structure outputs.** JSON over prose; fewer hallucinations and fewer tokens.
+- **Cite by path, not by quote.** Re-emitting a 2000-line file costs more than `src/path.ts:42`.
+- **Batch when possible.** N independent calls bundled into one batch payload reduces network overhead 5–10×.
+- **Stream when you can act on partials.** Latency to first useful chunk beats total wall-clock latency.
+
+---
+
+## 🧷 Stability guarantees
+
+- **Manifest schema** is stable within a major version.
+- **Trigger keywords** never silently change.
+- **Output schemas** for primary handlers are versioned; old schemas remain available for one major version after deprecation.
+- **File paths** cited in this README are checked at release time and won't 404 within a minor version.
+- **Environment variables** never get renamed without a deprecation window of 90 days.
+
+---
+
+## 🔚 The end
+
+You've read this far. Either you're evaluating `fact-check-skill` seriously, or you're studying it. Both are good outcomes. Open an issue with whatever felt missing — that's how this README earns its next thousand stars.
