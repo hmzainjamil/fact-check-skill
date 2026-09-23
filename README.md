@@ -1,5 +1,9 @@
 # fact-check-skill
 
+<!-- HMZ PORTFOLIO STANDARD -->
+> Portfolio status: active · Visibility: public · Source of truth: current repository source.
+<!-- END HMZ PORTFOLIO STANDARD -->
+
 > **11-step SIFT+CRAAP fact-check pipeline as a single Claude skill** — drop-in skill that runs claims through Stanford's SIFT method, the CRAAP test, source triangulation, prebunking, and emits an HTML evidence card
 
 <p align="center">
