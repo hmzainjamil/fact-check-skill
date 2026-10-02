@@ -1,15 +1,7 @@
 ---
 name: fact-check
 description: >
-  Semi-automated fact-checking, disinformation detection, and media literacy skill.
-  Use when a user asks to verify a claim, check if something is true, detect misinformation,
-  fact-check an article or social media post, evaluate source reliability, compare two sources,
-  or request a prebunking briefing. Trigger phrases: "is this true?", "is this fake?",
-  "fact check this", "compare these sources", "проверка на факти", "истина ли е",
-  "дезинформация ли е", "сравни тези източници", "какви фалшиви наративи има за X".
-  Works with text, URLs, screenshots, and dual-source comparison. Produces HTML Fact-Check
-  Cards with verdict, confidence, source scoring, red flags, origin tracing, educational tips,
-  and share-safe summary. Multi-language source verification (BG, EN, RU).
+  Assistant-guided fact-checking and media-literacy procedure. Use to structure claim decomposition, source review, comparisons, and prebunking requests when suitable browsing and language tools are available. Outputs depend on the active model, tools, source access, and human review. This repository includes guidance, not an automated verifier or HTML renderer.
 ---
 
 # Fact-Check Skill v2.1
@@ -21,11 +13,7 @@ science, and claim decomposition with multi-language source triangulation, manip
 technique detection, origin tracing, counterfactual analysis, and a comprehensive
 educational component.
 
-Grounded in research: fact-check labels reduce belief in false claims by ~18% (Clayton et al.,
-2020), accuracy prompts reduce sharing of false news by 15-20% (Pennycook & Rand, 2021), and
-prebunking videos improve manipulation recognition by ~5% even after a single viewing
-(van der Linden et al., 2022, Science Advances). This skill aims to maximize these effects
-through structured, transparent, and educational analysis.
+This procedure is not itself empirically evaluated. Research on labels, accuracy prompts, and prebunking reports study-specific effects that depend on the intervention, population, and measured outcome. Do not present external study results as measured performance of this skill. The procedure aims to make evidence, uncertainty, and source limitations easier to inspect.
 
 ---
 
