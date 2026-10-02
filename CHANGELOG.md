@@ -1,3 +1,5 @@
+# Fact-Check Skill - Changelog
+
 ## Unreleased
 
 ### Documentation and claim scope
