@@ -1,3 +1,10 @@
+## Unreleased
+
+### Documentation and claim scope
+- Clarify that the repository provides assistant guidance, not an automated verifier or HTML renderer.
+- Remove unsupported effect-size claims from the skill introduction and state that the procedure has not been empirically evaluated.
+- Add content-review and data-handling notes; downloadable archive parity remains unverified.
+
 # Fact-Check Skill - Changelog
 
 ## v2.1 (Current)
